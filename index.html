@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Parallax Master Class Template</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Raleway:100|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+    <div id="skrollr-body">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!--creates a progress bar/bookmark, that reveals how far you are along the page. When the page is at the top (0), the progress bar is not shown. When the page reaches the end, it should be 100% across the screen. In between, it will animate to the 100% based on where you're at in the page-->
+        <div id="progressBar" 
+            data-0="width: 0%"
+            data-end='width: 100%'
+        ></div>
+
+
+        <div id="fixedElement"
+            data-top="transform: translateY(0%); opacity: 1"
+            data--5p-top="transform: translateY(200%); opacity: 0"
+        >Hello, welcome to</div>
+        <!--when the page is at the top, the opacity is 1-->
+        <!--when the page is 400px above the top (-400 from the bottom), the opacity is 0 and it fades to 0 along the way-->
+        <header data-top="opacity: 1" data--400-top="opacity: 0">
+        <!--Same effect as above ^^, but in absolute values. When Header is at the top (0), opacity is 1. When the top of the Header is at 400px from the top, opacity is 0-->
+        <!-- <header data-0="opacity: 1" data-400="opacity: 0">
+            <div class="wrapper clearfix"> -->
+
+                <h1 class="title">Parallax Scrolling Master Class</h1>
+                <p>Hitting the Skrollr.js data-attributes right between the eyes!</p>
+
+            </div>
+        </header>
+        
+        <main>
+            <!--when the top of the #profiles div is at the bottom of the viewport, center the background (50%) and move the background 0%)-->
+            <!--when the bottom of the #profiles div is at the top of the viewport, center the background (50%) and move the background up 20%-->
+            <div id="profiles"
+                data-bottom-top="background-position: 50% 0%"
+                data-top-bottom="background-position: 50% -20%"
+            >
+                <div class="wrapper clearfix">
+
+                    <div class="boxer boxerA">
+                        <!--When the div is touching the bottom of the viewport, it's opacity is 0. When the image is 40px above the bottom of the viewport, it's opacity is 1-->
+                        <div class="boxerImg" 
+                            data-bottom="opacity: 0"
+                            data--40-bottom="opacity: 1"
+                        ></div>
+                        <h2>Amir <br />Khan</h2>
+                        <p>Donec consectetur egestas auctor. Nullam mattis lectus vel tellus semper, vel lacinia justo fringilla. Vestibulum semper pulvinar accumsan.</p>
+                    </div>
+
+                    <div class="boxer boxerB">
+                        <!--When the div is 40px above the bottom of the viewport, it's opacity is 0. When the image is 200px above the bottom of the viewport, it's opacity is 1-->
+                        <div class="boxerImg" 
+                            data--40-bottom="opacity: 0"
+                            data--200-bottom="opacity: 1"
+                        ></div>
+                        <h2>Floyd <br />Mayweather</h2>
+                        <p>Donec consectetur egestas auctor. Nullam mattis lectus vel tellus semper, vel lacinia justo fringilla. Vestibulum semper pulvinar accumsan.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--when the top of the #profiles div is at the bottom of the viewport, center the background (50%) and move the background 0%)-->
+            <!--when the bottom of the #profiles div is at the top of the viewport, center the background (50%) and move the background up 20%-->
+            <div id="profiles"
+                data-bottom-top="background-position: 50% 0%"
+                data-top-bottom="background-position: 50% -20%"
+            >
+                <div class="wrapper clearfix">
+
+                    <div class="boxer boxerA">
+                        <!--When the div is at the bottom of the viewport, it's height is 50% of what it normally is. When the image is 40px above the bottom of the viewport, it's height is 100%-->
+                        <div class="boxerImg" 
+                            data-bottom="transform: scale(.5)"
+                            data--40-bottom="transform: scale(1)"
+                        ></div>
+                        <h2>Amir <br />Khan</h2>
+                        <p>Donec consectetur egestas auctor. Nullam mattis lectus vel tellus semper, vel lacinia justo fringilla. Vestibulum semper pulvinar accumsan.</p>
+                    </div>
+
+                    <div class="boxer boxerB">
+                        <!--When the div is at the bottom of the viewport, it's height is 50% of what it normally is. When the image is 200px above the bottom of the viewport, it's height is 100% of what it normally is-->
+                        <div class="boxerImg" 
+                            data-bottom="transform: scale(.5)"
+                            data--200-bottom="transform: scale(1)"
+                        ></div>
+                        <h2>Floyd <br />Mayweather</h2>
+                        <p>Donec consectetur egestas auctor. Nullam mattis lectus vel tellus semper, vel lacinia justo fringilla. Vestibulum semper pulvinar accumsan.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--when the top of the #profiles div is at the bottom of the viewport, center the background (50%) and move the background 0%)-->
+            <!--when the bottom of the #profiles div is at the top of the viewport, center the background (50%) and move the background up 20%-->
+            <div id="profiles"
+                data-bottom-top="background-position: 50% 0%"
+                data-top-bottom="background-position: 50% -20%"
+            >
+                <div class="wrapper clearfix">
+
+                    <div class="boxer boxerA">
+                        <!--Multiple vars in animation-->
+                        <div class="boxerImg" 
+                            data-bottom="opacity: 0; transform: scale(.5)"
+                            data--40-bottom="opacity: 1; transform: scale(1)"
+                        ></div>
+                        <h2>Amir <br />Khan</h2>
+                        <p>Donec consectetur egestas auctor. Nullam mattis lectus vel tellus semper, vel lacinia justo fringilla. Vestibulum semper pulvinar accumsan.</p>
+                    </div>
+
+                    <div class="boxer boxerB">
+                        <!--Multiple vars in animation-->
+                        <div class="boxerImg" 
+                            data-bottom="opacity: 0; transform: scale(.5)"
+                            data--200-bottom="opacity: 1; transform: scale(1)"
+                        ></div>
+                        <h2>Floyd <br />Mayweather</h2>
+                        <p>Donec consectetur egestas auctor. Nullam mattis lectus vel tellus semper, vel lacinia justo fringilla. Vestibulum semper pulvinar accumsan.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--when the top of the #profiles div is at the bottom of the viewport, center the background (50%) and move the background 0%)-->
+            <!--when the bottom of the #profiles div is at the top of the viewport, center the background (50%) and move the background up 20%-->
+            <div id="profiles"
+                data-bottom-top="background-position: 50% 0%"
+                data-top-bottom="background-position: 50% -20%"
+            >
+                <div class="wrapper clearfix">
+
+                    <div class="boxer boxerA">
+                        <!--Multiple vars in animations from top down, but also including animations to fade out on the way down. When the image is 80px above the top of the viewport, it's opacity is 1. When the image is 180px above the viewport, it has animated itself out with an opacity of 0-->
+                        <div class="boxerImg" 
+                            data-bottom="opacity: 0; transform: scale(.5) rotate(360deg)"
+                            data--100-bottom="opacity: 1; transform: scale(1) rotate(0deg)"
+                        ></div>
+                        <h2>Amir <br />Khan</h2>
+                        <p>Donec consectetur egestas auctor. Nullam mattis lectus vel tellus semper, vel lacinia justo fringilla. Vestibulum semper pulvinar accumsan.</p>
+                    </div>
+
+                    <div class="boxer boxerB">
+                        <!--Multiple vars in animations from top down, but also including animations to fade out on the way down. When the image is at the top of the viewport, it's opacity is 1. When the image is 360px above the viewport, it has animated itself out with an opacity of 0-->
+                        <div class="boxerImg" 
+                            data-bottom="opacity: 0; transform: scale(.5)"
+                            data--200-bottom="opacity: 1; transform: scale(1)"
+                            data-top="opacity: 1"
+                            data--360-top="opacity: 0"
+                        ></div>
+                        <h2>Floyd <br />Mayweather</h2>
+                        <p>Donec consectetur egestas auctor. Nullam mattis lectus vel tellus semper, vel lacinia justo fringilla. Vestibulum semper pulvinar accumsan.</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="boxingRing">
+                <div class="wrapper clearfix">
+
+                    <!--data-achor-target tag shows where you want the data to be relative to. Any effects created will animate based on the position of the target-->
+                    <!--when the top of the boxingRing is at the bottom of the viewport, it should be scaled to half the size and rotated 120 degrees. When the top of the boxingRing is at the top of the viewport, it should be scaled to 100% and rotated 0 degrees-->
+                    <!--[swing] denotes how the animation should be eased into the viewport. Check out: https://github.com/Prinzhorn/skrollr#easing for more easing options-->
+                    <div id="stage"
+                        data-anchor-target="#boxingRing"
+                        data-bottom-top="transform[swing]: scale(.5) rotate(120deg); opacity: 0"
+                        data-top="transform[swing]: scale(1) rotate(0); opacity: 1"
+                    >
+
+                    <!--when the top of the boxingRing is 100px from the top of the viewport, boxerTopA should be set at opacity: 0 and scaled to 50% of the size. When the top of the boxingRing is at the top of the viewport, boxerTopA should be set to full opacity and should be full size.-->
+                        <div class="boxerTop boxerTopA"
+                            data-anchor-target="#boxingRing"
+                            data-4p-top="opacity: 0; transform[bounce]: scale(.5)"
+                            data-top="opacity: 1; transform[bounce]: scale(1)"
+                        ></div>
+
+                        <div class="boxerTop boxerTopB"
+                            data-anchor-target="#boxingRing"
+                            data-2p-top="opacity: 0; transform[bounce]: scale(.5)"
+                            data--10p-top="opacity: 1; transform[bounce]: scale(1)"
+                        ></div>
+
+                        <!--fades in an image, then changes each image at different points along the scroll. img_move1 is showing until the boxingRing is 600px below the top of the viewport. img_move2 is showing  until the boxingRing is 750px below the top of the viewport. img_move3 is showing until the boxingRing is 900px below the top of the viewport. img_move1 shows when boxingRing is 900px below the top of the viewport and then slowly fades out over the next 150px (1050px).-->
+                        <div id="moves"
+                            data-anchor-target: "#boxingRing"
+                            data--15p-top="opacity: 0; background-image: !url(img/img_move1.png)"
+                            data--25p-top="opacity: 1; background-image: !url(img/img_move1.png)"
+                            data--45p-top="opacity: 1; background-image: !url(img/img_move2.png)"
+                            data--65p-top="opacity: 1; background-image: !url(img/img_move3.png)"
+                            data--85p-top="opacity: 1; background-image: !url(img/img_move1.png)"
+                            data--90p-top="opacity: 0; background-image: !url(img/img_move1.png)"
+                        ></div>
+                    </div>
+                    
+                    <!--when the boxingRing is at the top of the viewport, the opacity is 0. When the boxingRing is 100px from the top of the viewport, opacity should be 1 and it should be 200px below where it normally would be. It should stay at opacity 1 for 300px (from 100 to 400) and then fade out (opacity: 0) and up (translateY(-400px)) for the next 50px-->
+                    <div id="round1"
+                        data-anchor-target="#boxingRing"
+                        data-top="opacity: 0; transform: translateY(200px)"
+                        data--7p-top="opacity: 1; transform: translateY(0px)"
+                        data--15p-top="opacity: 1; transform: translateY(0px)"
+                        data--17p-top="opacity: 0; transform: translateY(-400px)"
+                    >Round 1</div>
+
+                    <div id="round2"
+                        data-anchor-target="#boxingRing"
+                        data--100p-top="opacity: 0; transform: translateY(200px)"
+                        data--107p-top="opacity: 1; transform: translateY(0px)"
+                        data--115p-top="opacity: 1; transform: translateY(0px)"
+                        data--117p-top="opacity: 0; transform: translateY(-400px)"
+                    >Round 2</div>
+                    
+                    <!--Creates the fatigue indicator next to the boxing ring.-->
+                    <div class="indicator amirFatigue"
+                        data-anchor-target: "#boxingRing"
+                        data-top="opacity: 0; !background-color: rgb(171, 204, 20); height: 0px"
+                        data--35p-top="opacity: 1; !background-color: rgb(171, 204, 20); height: 0px"
+                        data--40p-top="opacity: 1; !background-color: rgb(171, 204, 20); height: 80px"
+                        data--47p-top="opacity: 1; !background-color: rgb(255, 204, 20); height: 160px"
+                        data--60p-top="opacity: 1; !background-color: rgb(255, 204, 20); height: 240px"
+                        data--70p-top="opacity: 1; !background-color: rgb(231, 76, 60); height: 300px"
+                        data--80p-top="opacity: 1; !background-color: rgb(231, 76, 60); height: 300px"
+                        data--90p-top="opacity: 1; !background-color: rgb(231, 76, 60); height: 300px"
+
+                        data--135p-top="opacity: 1; !background-color: rgb(171, 204, 20); height: 0px"
+                        data--140p-top="opacity: 1; !background-color: rgb(171, 204, 20); height: 80px"
+                        data--147p-top="opacity: 1; !background-color: rgb(255, 204, 20); height: 160px"
+                        data--160p-top="opacity: 1; !background-color: rgb(255, 204, 20); height: 240px"
+                        data--170p-top="opacity: 1; !background-color: rgb(231, 76, 60); height: 300px"
+                        data--180p-top="opacity: 1; !background-color: rgb(231, 76, 60); height: 300px"
+                        data--190p-top="opacity: 1; !background-color: rgb(231, 76, 60); height: 300px"
+                    >
+                        <p>Fatigue</p>
+                    </div>
+
+                    <div class="indicator floydFatigue"
+                        data-anchor-target: "#boxingRing"
+                        data-11p-top="opacity: 0; !background-color: rgb(171, 204, 20); height: 0px"
+                        data--16p-top="opacity: 1; !background-color: rgb(171, 204, 20); height: 0px"
+                        data--21p-top="opacity: 1; !background-color: rgb(171, 204, 20); height: 80px"
+                        data--28p-top="opacity: 1; !background-color: rgb(255, 204, 20); height: 160px"
+                        data--41p-top="opacity: 1; !background-color: rgb(255, 204, 20); height: 240px"
+                        data--51p-top="opacity: 1; !background-color: rgb(231, 76, 60); height: 300px"
+                        data--61p-top="opacity: 1; !background-color: rgb(231, 76, 60); height: 300px"
+                        data--71p-top="opacity: 1; !background-color: rgb(231, 76, 60); height: 300px"
+
+                        data--116p-top="opacity: 1; !background-color: rgb(171, 204, 20); height: 0px"
+                        data--121p-top="opacity: 1; !background-color: rgb(171, 204, 20); height: 80px"
+                        data--128p-top="opacity: 1; !background-color: rgb(255, 204, 20); height: 160px"
+                        data--141p-top="opacity: 1; !background-color: rgb(255, 204, 20); height: 240px"
+                        data--151p-top="opacity: 1; !background-color: rgb(231, 76, 60); height: 300px"
+                        data--161p-top="opacity: 1; !background-color: rgb(231, 76, 60); height: 300px"
+                        data--171p-top="opacity: 1; !background-color: rgb(231, 76, 60); height: 300px"
+                    >
+                        <p>Fatigue</p>
+                    </div>
+
+                    <div class="bulb" id="flashTR"
+                        data-anchor-target="#boxingRing"
+                        data-top="opacity: 0"
+                        data--18p-top="opacity: 0"
+                        data--21p-top="opacity: 1"
+                        data--24p-top="opacity: 0"
+                        data--58p-top="opacity: 0"
+                        data--61p-top="opacity: 1"
+                        data--64p-top="opacity: 0"
+                        data--78p-top="opacity: 0"
+                        data--81p-top="opacity: 1"
+                        data--84p-top="opacity: 0"
+                    ></div>
+                    <div class="bulb" id="flashBR"
+                        data-anchor-target="#boxingRing"
+                        data-top="opacity: 0"
+                        data--48p-top="opacity: 0"
+                        data--51p-top="opacity: 1"
+                        data--54p-top="opacity: 0"
+                        data--78p-top="opacity: 0"
+                        data--81p-top="opacity: 1"
+                        data--84p-top="opacity: 0"
+                        data--105p-top="opacity: 0"
+                        data--108p-top="opacity: 1"
+                        data--111p-top="opacity: 0"
+                    ></div>
+                    <div class="bulb" id="flashTL"
+                        data-anchor-target="#boxingRing"
+                        data-top="opacity: 0"
+                        data--25p-top="opacity: 0"
+                        data--28p-top="opacity: 1"
+                        data--31p-top="opacity: 0"
+                        data--48p-top="opacity: 0"
+                        data--51p-top="opacity: 1"
+                        data--54p-top="opacity: 0"
+                        data--105p-top="opacity: 0"
+                        data--108p-top="opacity: 1"
+                        data--111p-top="opacity: 0"
+                    ></div> 
+                    <div class="bulb" id="flashBL"
+                        data-anchor-target="#boxingRing"
+                        data-top="opacity: 0"
+                        data--58p-top="opacity: 0"
+                        data--61p-top="opacity: 1"
+                        data--64p-top="opacity: 0"
+                        data--68p-top="opacity: 0"
+                        data--71p-top="opacity: 1"
+                        data--74p-top="opacity: 0"
+                        data--118p-top="opacity: 0"
+                        data--121p-top="opacity: 1"
+                        data--124p-top="opacity: 0"
+                    ></div>
+
+                </div>
+            </div>
+
+        </main><!-- /main -->
+        
+        <!--When the page reaches the end, footer displays white [rgb(255, 255, 255)]. When the page is 25px from being at the bottom of the page, footer displays, grey [rgb(231, 231, 231)]-->
+        <footer data-end="background-color: rgb(255, 255, 255)" data-25-end="background-color: rgb(231, 231, 231)">
+            <div class="wrapper clearfix">
+                <p>&copy; 2014 Ihatetomatoes.net</p>
+            </div>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <!--use enquire.js to turn skrollr off on mobile-->
+        <script src="js/enquire.min.js"></script>
+        <script src='js/skrollr.min.js'></script>
+        <div>
+    </body>
+</html>
