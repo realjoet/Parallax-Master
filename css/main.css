@@ -118,7 +118,6 @@ header {
     }
 
 /* =Profiles */
-main { }
     #profiles {
         background: url('../img/bcg_profiles.png') repeat-y top center;
         background-attachment: fixed;
@@ -325,7 +324,7 @@ footer {
                 background-image: url('../img/img_move1.png') no-repeat 0 0;
             }
 
-        #round1, #round2 {
+        #round1, #round2, #round3 {
             padding: 20px 30px;
             font-size: 2em;
             background-color: #222;
@@ -367,7 +366,7 @@ footer {
 
         .bulb {
             position: fixed;
-            background: blue;
+            background: #ffffd0;
             height: 50px;
             width: 50px;
             border-radius: 60px;
@@ -376,22 +375,22 @@ footer {
 
             #flashTR {
                 top: 20%;
-                left: 80%;
+                left: 85%;
             }
 
             #flashBR {
                 top: 80%;
-                left: 80%;
+                left: 85%;
             }
 
             #flashTL {
                 top: 20%;
-                left: 20%;
+                left: 15%;
             }
 
             #flashBL {
                 top: 80%;
-                left: 20%;
+                left: 15%;
             }
 
 
