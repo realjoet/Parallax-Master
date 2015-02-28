@@ -57,6 +57,17 @@ textarea {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* ===== Parallax Master Class ==============================================
    Author: Petr Tichy - ihatetomatoes.net
    ========================================================================== */
@@ -282,7 +293,7 @@ footer {
     #boxingRing {
         background-color: #e7e7e7;
         position: relative;
-        height: 4650px;
+        height: 6250px;
     }
         #stage {
             width: 718px;
@@ -324,7 +335,7 @@ footer {
                 background-image: url('../img/img_move1.png') no-repeat 0 0;
             }
 
-        #round1, #round2, #round3 {
+        #round1, #round2, #round3, #winner {
             padding: 20px 30px;
             font-size: 2em;
             background-color: #222;
@@ -336,6 +347,11 @@ footer {
             top: 50%;
             left: 50%;
             margin: -80px 0 0 -110px;
+        }
+
+        #winner {
+            width: 250px;
+            margin: -80px 0 0 -160px;
         }
 
 
@@ -392,6 +408,37 @@ footer {
                 top: 80%;
                 left: 15%;
             }
+
+            #flash-whole-screen {
+                background: white;
+                height: 750px;
+                width: 100%;
+                top: 0;
+            }
+
+    #amir-winner {
+        width: 100%;
+        margin: 0;
+        padding: 0 0 3%;
+        z-index: 105;
+        background: url('../img/bcg_profiles.png') repeat-y 0% 100%;
+        background-size: 300%;
+    }
+
+        #amir-winner__big-img {
+            width: 30%;
+            margin: 10% 35% 0;
+            z-index: 500;
+        }
+
+        #amir-winner__name {
+            width: 100%;
+            color: white;
+            font-size: 5em;
+            margin: 1% 0 0;
+            z-index: 500;
+            text-align: center;
+        }
 
 
 

@@ -24,12 +24,6 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!--creates a progress bar/bookmark, that reveals how far you are along the page. When the page is at the top (0), the progress bar is not shown. When the page reaches the end, it should be 100% across the screen. In between, it will animate to the 100% based on where you're at in the page-->
-        <div id="progressBar" 
-            data-0="width: 0%"
-            data-end='width: 100%'
-        ></div>
-
 
         <div id="fixedElement"
             data-top="transform: translateY(0%); opacity: 1"
@@ -49,99 +43,6 @@
         </header>
         
         <main>
-            <!--when the top of the #profiles div is at the bottom of the viewport, center the background (50%) and move the background 0%)-->
-            <!--when the bottom of the #profiles div is at the top of the viewport, center the background (50%) and move the background up 20%-->
-            <div id="profiles"
-                data-bottom-top="background-position: 50% 0%"
-                data-top-bottom="background-position: 50% -20%"
-            >
-                <div class="wrapper clearfix">
-
-                    <div class="boxer boxerA">
-                        <!--When the div is touching the bottom of the viewport, it's opacity is 0. When the image is 40px above the bottom of the viewport, it's opacity is 1-->
-                        <div class="boxerImg" 
-                            data-bottom="opacity: 0"
-                            data--40-bottom="opacity: 1"
-                        ></div>
-                        <h2>Amir <br />Khan</h2>
-                        <p>Donec consectetur egestas auctor. Nullam mattis lectus vel tellus semper, vel lacinia justo fringilla. Vestibulum semper pulvinar accumsan.</p>
-                    </div>
-
-                    <div class="boxer boxerB">
-                        <!--When the div is 40px above the bottom of the viewport, it's opacity is 0. When the image is 200px above the bottom of the viewport, it's opacity is 1-->
-                        <div class="boxerImg" 
-                            data--40-bottom="opacity: 0"
-                            data--200-bottom="opacity: 1"
-                        ></div>
-                        <h2>Floyd <br />Mayweather</h2>
-                        <p>Donec consectetur egestas auctor. Nullam mattis lectus vel tellus semper, vel lacinia justo fringilla. Vestibulum semper pulvinar accumsan.</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <!--when the top of the #profiles div is at the bottom of the viewport, center the background (50%) and move the background 0%)-->
-            <!--when the bottom of the #profiles div is at the top of the viewport, center the background (50%) and move the background up 20%-->
-            <div id="profiles"
-                data-bottom-top="background-position: 50% 0%"
-                data-top-bottom="background-position: 50% -20%"
-            >
-                <div class="wrapper clearfix">
-
-                    <div class="boxer boxerA">
-                        <!--When the div is at the bottom of the viewport, it's height is 50% of what it normally is. When the image is 40px above the bottom of the viewport, it's height is 100%-->
-                        <div class="boxerImg" 
-                            data-bottom="transform: scale(.5)"
-                            data--40-bottom="transform: scale(1)"
-                        ></div>
-                        <h2>Amir <br />Khan</h2>
-                        <p>Donec consectetur egestas auctor. Nullam mattis lectus vel tellus semper, vel lacinia justo fringilla. Vestibulum semper pulvinar accumsan.</p>
-                    </div>
-
-                    <div class="boxer boxerB">
-                        <!--When the div is at the bottom of the viewport, it's height is 50% of what it normally is. When the image is 200px above the bottom of the viewport, it's height is 100% of what it normally is-->
-                        <div class="boxerImg" 
-                            data-bottom="transform: scale(.5)"
-                            data--200-bottom="transform: scale(1)"
-                        ></div>
-                        <h2>Floyd <br />Mayweather</h2>
-                        <p>Donec consectetur egestas auctor. Nullam mattis lectus vel tellus semper, vel lacinia justo fringilla. Vestibulum semper pulvinar accumsan.</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <!--when the top of the #profiles div is at the bottom of the viewport, center the background (50%) and move the background 0%)-->
-            <!--when the bottom of the #profiles div is at the top of the viewport, center the background (50%) and move the background up 20%-->
-            <div id="profiles"
-                data-bottom-top="background-position: 50% 0%"
-                data-top-bottom="background-position: 50% -20%"
-            >
-                <div class="wrapper clearfix">
-
-                    <div class="boxer boxerA">
-                        <!--Multiple vars in animation-->
-                        <div class="boxerImg" 
-                            data-bottom="opacity: 0; transform: scale(.5)"
-                            data--40-bottom="opacity: 1; transform: scale(1)"
-                        ></div>
-                        <h2>Amir <br />Khan</h2>
-                        <p>Donec consectetur egestas auctor. Nullam mattis lectus vel tellus semper, vel lacinia justo fringilla. Vestibulum semper pulvinar accumsan.</p>
-                    </div>
-
-                    <div class="boxer boxerB">
-                        <!--Multiple vars in animation-->
-                        <div class="boxerImg" 
-                            data-bottom="opacity: 0; transform: scale(.5)"
-                            data--200-bottom="opacity: 1; transform: scale(1)"
-                        ></div>
-                        <h2>Floyd <br />Mayweather</h2>
-                        <p>Donec consectetur egestas auctor. Nullam mattis lectus vel tellus semper, vel lacinia justo fringilla. Vestibulum semper pulvinar accumsan.</p>
-                    </div>
-
-                </div>
-            </div>
-
             <!--when the top of the #profiles div is at the bottom of the viewport, center the background (50%) and move the background 0%)-->
             <!--when the bottom of the #profiles div is at the top of the viewport, center the background (50%) and move the background up 20%-->
             <div id="profiles"
@@ -186,11 +87,15 @@
                         data-anchor-target="#boxingRing"
                         data-bottom-top="transform[swing]: scale(.5) rotate(120deg); opacity: 0"
                         data-top="transform[swing]: scale(1) rotate(0); opacity: 1"
+                        data--850p-top="transform[swing]: scale(1) rotate(0); opacity: 1"
+                        data--900p-top="transform[swing]: scale(1) rotate(0); opacity: 0"
                     >
+
 
                     <!--when the top of the boxingRing is 100px from the top of the viewport, boxerTopA should be set at opacity: 0 and scaled to 50% of the size. When the top of the boxingRing is at the top of the viewport, boxerTopA should be set to full opacity and should be full size.-->
                         <div class="boxerTop boxerTopA"
                             data-anchor-target="#boxingRing"
+                            data-name="round1"
                             data-4p-top="opacity: 0; transform[bounce]: scale(.5) translate(0, 0) rotate(0)" 
                             data-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0)"
                             data--10p-top="opacity: 1; transform[bounce]: scale(1) translate(30px, 30px) rotate(0)"
@@ -205,6 +110,7 @@
                             data--160p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(65deg)"
                             data--177p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0)"
 
+                            data-name="round2"
                             data--217p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0)"
                             data--225p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(30deg)"
                             data--235p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(-30deg)"
@@ -228,22 +134,32 @@
                             data--380p-top="opacity: 1; transform[bounce]: scale(1) translate(120px, 120px) rotate(0deg)"
                             data--390p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0deg)"
 
-                            data--420p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0)"
-                            data--425p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0)"
-                            data--445p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 100px) rotate(0)"
-                            data--455p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 150px) rotate(-40deg)"
-                            data--460p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 220px) rotate(-40deg)"
-                            data--465p-top="opacity: 1; transform[bounce]: scale(1) translate(50px, 250px) rotate(-60deg)"
-                            data--485p-top="opacity: 1; transform[bounce]: scale(1) translate(100px, 250px) rotate(-70deg)"
-                            data--505p-top="opacity: 1; transform[bounce]: scale(1) translate(150px, 250px) rotate(-80deg)"
-                            data--507p-top="opacity: 1; transform[bounce]: scale(1) translate(200px, 250px) rotate(-100deg)"
-                            data--510p-top="opacity: 1; transform[bounce]: scale(1) translate(220px, 250px) rotate(-120deg)"
-                            data--520p-top="opacity: 1; transform[bounce]: scale(1) translate(250px, 250px) rotate(40deg)"
-                            data--530p-top="opacity: 1; transform[bounce]: scale(1) translate(220px, 250px) rotate(-30deg)"
+                            data-name="round3"
+                            data--420p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0deg)"
+                            data--425p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(30deg)"
+                            data--435p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0deg)"
+                            data--440p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(-30deg)"
+                            data--445p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0deg)"
+                            data--455p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(30deg)"
+                            data--460p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0deg)"
+                            data--465p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 100px) rotate(-40deg)"
+                            data--495p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 150px) rotate(-40deg)"
+                            data--510p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 220px) rotate(-40deg)"
+                            data--515p-top="opacity: 1; transform[bounce]: scale(1) translate(50px, 250px) rotate(-60deg)"
+                            data--535p-top="opacity: 1; transform[bounce]: scale(1) translate(100px, 250px) rotate(-70deg)"
+                            data--555p-top="opacity: 1; transform[bounce]: scale(1) translate(150px, 250px) rotate(-80deg)"
+                            data--567p-top="opacity: 1; transform[bounce]: scale(1) translate(200px, 250px) rotate(-100deg)"
+                            data--580p-top="opacity: 1; transform[bounce]: scale(1) translate(220px, 250px) rotate(-120deg)"
+                            data--590p-top="opacity: 1; transform[bounce]: scale(1) translate(250px, 250px) rotate(40deg)"
+                            data--610p-top="opacity: 1; transform[bounce]: scale(1) translate(240px, 260px) rotate(-70deg)"
+                            data--620p-top="opacity: 1; transform[bounce]: scale(1) translate(240px, 220px) rotate(40deg)"
+                            data--640p-top="opacity: 1; transform[bounce]: scale(1) translate(220px, 220px) rotate(-120deg)"
+                            data--650p-top="opacity: 1; transform[bounce]: scale(1) translate(250px, 220px) rotate(-10deg)"
                         ></div>
 
                         <div class="boxerTop boxerTopB"
                             data-anchor-target="#boxingRing"
+                            data-name="round1"
                             data-2p-top="opacity: 0; transform[bounce]: scale(.5) translate(0, 0) rotate(0)" 
                             data--10p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0)"
                             data--37p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0)"
@@ -263,7 +179,8 @@
                             data--145p-top="opacity: 1; transform[bounce]: scale(1) translate(-240px, -200px) rotate(115deg)"
                             data--160p-top="opacity: 1; transform[bounce]: scale(1) translate(-200px, -180px) rotate(75deg)"
                             data--177p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0)"
-
+                            
+                            data-name="round2"
                             data--217p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0)"
                             data--220p-top="opacity: 1; transform[bounce]: scale(1) translate(-20px, -60px) rotate(0)"
                             data--225p-top="opacity: 1; transform[bounce]: scale(1) translate(-40px, -120px) rotate(0)"
@@ -280,6 +197,7 @@
                             data--362p-top="opacity: 1; transform[bounce]: scale(1) translate(60px, 60px) rotate(0deg)"
                             data--377p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0deg)"
 
+                            data-name="round3"
                             data--420p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0)"
                             data--425p-top="opacity: 1; transform[bounce]: scale(1) translate(0, -100px) rotate(0)"
                             data--430p-top="opacity: 1; transform[bounce]: scale(1) translate(0, -250px) rotate(0)"
@@ -292,7 +210,15 @@
                             data--475p-top="opacity: 1; transform[bounce]: scale(1) translate(-100px, -250px) rotate(-40deg)"
                             data--495p-top="opacity: 1; transform[bounce]: scale(1) translate(0, -250px) rotate(-60deg)"
                             data--500p-top="opacity: 1; transform[bounce]: scale(1) translate(0, -100px) rotate(-40deg)"
-                            data--510p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0)"
+                            data--510p-top="opacity: 1; transform[bounce]: scale(1) translate(0, 0) rotate(0deg)"
+                            data--630p-top="opacity: 1; transform[bounce]: scale(1) translate(30px, -80px) rotate(0deg)"
+                            data--652p-top="opacity: 1; transform[bounce]: scale(1) translate(30px, -80px) rotate(0deg)"
+                            data--655p-top="opacity: 1; transform[bounce]: scale(1) translate(90px, -80px) rotate(0deg)"
+                            data--655p-top="opacity: 1; transform[bounce]: scale(1) translate(90px, -80px) rotate(0deg)"
+                            data--690p-top="opacity: 1; transform[bounce]: scale(1) translate(90px, -80px) rotate(1080deg)"
+                            data--698p-top="opacity: 1; transform[bounce]: scale(1) translate(90px, -80px) rotate(0deg)"
+                            data--758p-top="opacity: 0; transform[bounce]: scale(1) translate(90px, -80px) rotate(0deg)"
+
                         ></div>
 
                         <!--fades in an image, then changes each image at different points along the scroll. img_move1 is showing until the boxingRing is 600px below the top of the viewport. img_move2 is showing  until the boxingRing is 750px below the top of the viewport. img_move3 is showing until the boxingRing is 900px below the top of the viewport. img_move1 shows when boxingRing is 900px below the top of the viewport and then slowly fades out over the next 150px (1050px).-->
@@ -310,7 +236,7 @@
                             data--380p-top="opacity: 0; background-image: !url(img/img_move3.png)"
                             data--387p-top="opacity: 1; background-image: !url(img/img_move3.png)"
                             data--395p-top="opacity: 1; background-image: !url(img/img_move3.png)"
-                            data--405p-top="opacity: 1; background-image: !url(img/img_move3.png)"
+                            data--405p-top="opacity: 0; background-image: !url(img/img_move3.png)"
                         ></div>
                     </div>
                     
@@ -338,6 +264,14 @@
                         data--405p-top="opacity: 1; transform: translateY(0px)"
                         data--407p-top="opacity: 0; transform: translateY(-400px)"
                     >Round 3</div>
+
+                    <div id="winner"
+                        data-anchor-target="#boxingRing"
+                        data--770p-top="opacity: 0; transform: translateY(200px)"
+                        data--780p-top="opacity: 1; transform: translateY(0px)"
+                        data--800p-top="opacity: 1; transform: translateY(0px)"
+                        data--810p-top="opacity: 0; transform: translateY(-400px)"
+                    >And the winner is...</div>
                     
                     <!--Creates the fatigue indicator next to the boxing ring.-->
                     <div class="indicator amirFatigue"
@@ -368,6 +302,9 @@
                         data--270p-top="opacity: 1; background-color: rgb(231, 76, 60); height: 300px"
                         data--280p-top="opacity: 1; background-color: rgb(231, 76, 60); height: 300px"
                         data--290p-top="opacity: 1; background-color: rgb(231, 76, 60); height: 300px"
+
+                        data--810p-top="opacity: 1; background-color: rgb(231, 76, 60); height: 300px"
+                        data--840p-top="opacity: 0; background-color: rgb(231, 76, 60); height: 300px"
                     >
                         <p>Fatigue</p>
                     </div>
@@ -403,6 +340,9 @@
                         data--251p-top="opacity: 1; background-color: rgb(231, 76, 60); height: 300px"
                         data--261p-top="opacity: 1; background-color: rgb(231, 76, 60); height: 300px"
                         data--271p-top="opacity: 1; background-color: rgb(231, 76, 60); height: 300px"
+
+                        data--810p-top="opacity: 1; background-color: rgb(231, 76, 60); height: 300px"
+                        data--840p-top="opacity: 0; background-color: rgb(231, 76, 60); height: 300px"
                     >
                         <p>Fatigue</p>
                     </div>
@@ -433,6 +373,7 @@
                         data--278p-top="opacity: 0; transform: scale(1)"
                         data--281p-top="opacity: 1; transform: scale(1)"
                         data--284p-top="opacity: 0; transform: scale(1)"
+
                     ></div>
                     <div class="bulb" id="flashBR"
                         data-anchor-target="#boxingRing"
@@ -522,7 +463,53 @@
                         data--274p-top="opacity: 0; transform: scale(1)"
                     ></div>
 
+                    <div class="bulb" id="flash-whole-screen"
+                        data-anchor-target="#boxingRing"
+                        data-top="opacity: 0; transform: scale(1)"
+                        data--61p-top="opacity: 0; transform: scale(1)"
+                        data--64p-top="opacity: 1; transform: scale(2)"
+                        data--66p-top="opacity: 1; transform: scale(3)"
+                        data--67p-top="opacity: 0; transform: scale(1)"
+                        data--71p-top="opacity: 0; transform: scale(1)"
+                        data--74p-top="opacity: 1; transform: scale(2)"
+                        data--76p-top="opacity: 1; transform: scale(3)"
+                        data--77p-top="opacity: 0; transform: scale(1)"
+                        data--121p-top="opacity: 0; transform: scale(1)"
+                        data--124p-top="opacity: 1; transform: scale(2)"
+                        data--126p-top="opacity: 1; transform: scale(3)"
+                        data--127p-top="opacity: 0; transform: scale(1)"
+                        
+                        data--208p-top="opacity: 0; transform: scale(1)"
+                        data--211p-top="opacity: 1; transform: scale(2)"
+                        data--213p-top="opacity: 1; transform: scale(3)"
+                        data--214p-top="opacity: 0; transform: scale(1)"
+                        data--228p-top="opacity: 0; transform: scale(1)"
+                        data--232p-top="opacity: 1; transform: scale(2)"
+                        data--233p-top="opacity: 1; transform: scale(3)"
+                        data--231p-top="opacity: 0; transform: scale(1)"
+                        data--251p-top="opacity: 0; transform: scale(1)"
+                        data--254p-top="opacity: 1; transform: scale(2)"
+                        data--256p-top="opacity: 1; transform: scale(3)"
+                        data--257p-top="opacity: 0; transform: scale(1)"
+                    ></div>
+
+
+
+
                 </div>
+
+
+            </div> <!--boxingRing-->
+
+            <div id="amir-winner">
+                        <img id="amir-winner__big-img" src="img/img_boxerA.png" alt="Floyd"
+                            data-anchor-target="#boxingRing"
+                            data-top="opacity: 0; z-index: 15"
+                            data--820p-top="opacity: 0; z-index: 95; scale: "
+                            data--822p-top="opacity: 1; z-index: 95"
+                            data--870p-top="opacity: 1; z-index: 95"
+                        >
+                        <h1 id="amir-winner__name">Amir Khan!</h1>
             </div>
 
         </main><!-- /main -->
