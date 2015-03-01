@@ -293,7 +293,7 @@ footer {
     #boxingRing {
         background-color: #e7e7e7;
         position: relative;
-        height: 6250px;
+        height: 8250px;
     }
         #stage {
             width: 718px;
@@ -415,7 +415,9 @@ footer {
                 height: 750px;
                 width: 100%;
                 top: 0;
+                z-index: 100;
             }
+
 
     #amir-winner {
         width: 100%;
