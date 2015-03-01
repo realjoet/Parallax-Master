@@ -387,6 +387,7 @@ footer {
             width: 50px;
             border-radius: 60px;
             z-index: 10;
+            opacity: 0;
         }
 
             #flashTR {
